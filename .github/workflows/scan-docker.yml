@@ -1,0 +1,16 @@
+on: workflow_dispatch
+
+name: Docker Scan
+jobs:
+  scan-repo:
+    runs-on: ubuntu-latest
+    container:
+      image: aikidosecurity/local-scanner:v1.0.15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: demo-app
+      - name: Run scan
+        run: aikido-local-scanner scan demo-app --apikey AIK_CI_pjsEJaPch24BB0QXCx6C76cJWzh6JxB57SaJCEeOx8z5J2uZuRv0mvMBxVQFTOon --repositoryname MyRepo --branchname master

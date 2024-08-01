@@ -1,0 +1,18 @@
+on:
+  pull_request:
+    branches:
+      - master
+      
+name: Aikido PR Scan Dockerized
+jobs:
+  aikido-local-scan-repo:
+    runs-on: ubuntu-latest
+    container:
+      image: aikidosecurity/local-scanner:latest
+    steps: 
+      - uses: actions/checkout@v4 
+        with: 
+          token: ${{ secrets.GITHUB_TOKEN }} 
+          path: demo-app
+      - name: Run scan
+        run: aikido-local-scanner scan demo-app --apikey AIK_CI_Rtj05sJhcFoLftHJ0GwcCJVZ56Rk59n0kPvTAnN6UJ2Pj3P57DiVgAOYPTSJgjh6 --repositoryname MyRepo --branchname master --gating-mode pr --fail-on critical --base-commit-id ${{ github.event.pull_request.base.sha }} --head-commit-id ${{ github.event.pull_request.head.sha }}

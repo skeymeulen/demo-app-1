@@ -12,4 +12,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }} 
           path: demo-app
       - name: Run scan
-        run: aikido-local-scanner image-scan centos --apikey AIK_CI_X0oCFY7T9POOiTkewXJBRtxTF0J2e5vCIv1XISLPrj18CjCt00yvuiJv59OJAywt --debug
+        run: aikido-local-scanner image-scan centos --apikey AIK_CI_X0oCFY7T9POOiTkewXJBRtxTF0J2e5vCIv1XISLPrj18CjCt00yvuiJv59OJAywt --log-scan-output

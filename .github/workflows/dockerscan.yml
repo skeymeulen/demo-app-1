@@ -15,4 +15,4 @@ jobs:
         run: aikido-local-scanner scan demo-app --repositoryname demo-app --branchname main --apikey AIK_CI_X0oCFY7T9POOiTkewXJBRtxTF0J2e5vCIv1XISLPrj18CjCt00yvuiJv59OJAywt --gating-result-output output.json --fail-on low
       - name: ls
         if: always()
-        run: ls
+        run: cat output.json

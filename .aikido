@@ -1,0 +1,8 @@
+ignore:
+  cves:
+    '123':
+      reason: this is the reason
+exclude:
+  paths:
+    - src/python
+    - src/index.js

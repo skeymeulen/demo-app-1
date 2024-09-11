@@ -10,7 +10,7 @@ jobs:
           path: my-app
       - run:
           name: "Run Aikido scan"
-          command: aikido-local-scanner scan my-app --repositoryname my-circleci-app --branchname main --apikey AIK_CI_X0oCFY7T9POOiTkewXJBRtxTF0J2e5vCIv1XISLPrj18CjCt00yvuiJv59OJAywt
+          command: aikido-local-scanner scan my-app --repositoryname my-circleci-app --branchname main --apikey "$AIKIDO_API_KEY"
 workflows:
   my-workflow:
     jobs:

@@ -1,7 +1,7 @@
 ignore:
   cves:
-    '123':
-      reason: this is the reason
+    '2024-30105':
+      reason: random reason
 exclude:
   paths:
     - src/python

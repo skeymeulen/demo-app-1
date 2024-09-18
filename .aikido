@@ -5,3 +5,4 @@ ignore:
 exclude:
   paths:
     - nuget/packages.lock.json
+

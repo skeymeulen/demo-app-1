@@ -4,5 +4,4 @@ ignore:
       reason: random reason
 exclude:
   paths:
-    - src/python
-    - src/index.js
+    - nuget/packages.lock.json

@@ -1,0 +1,5 @@
+import.voucher.username=
+import.voucher.password=
+
+queryprofile.slowquerylimit=50
+queryprofile.expesivequerylimit=100

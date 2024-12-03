@@ -14,5 +14,9 @@ jobs:
         with: 
           token: ${{ secrets.GITHUB_TOKEN }} 
           path: demo-app
+      - name: Debug Output branch name
+        run: echo "Feature branch name ${{ github.event.pull_request.head.ref }}"
+      - name: Debug Output branch name short
+        run: echo "Feature branch name short ${{ github.head_ref }}"
       - name: Run scan
         run: aikido-local-scanner scan demo-app --apikey AIK_CI_Rtj05sJhcFoLftHJ0GwcCJVZ56Rk59n0kPvTAnN6UJ2Pj3P57DiVgAOYPTSJgjh6 --repositoryname MyRepo --branchname master --gating-mode pr --fail-on critical --base-commit-id ${{ github.event.pull_request.base.sha }} --head-commit-id ${{ github.event.pull_request.head.sha }}

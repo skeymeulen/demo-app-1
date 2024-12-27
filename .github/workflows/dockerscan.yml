@@ -10,6 +10,6 @@ jobs:
       - uses: actions/checkout@v4 
         with: 
           token: ${{ secrets.GITHUB_TOKEN }} 
-          path: demo-app
+          path: ${GITHUB_REPOSITORY#*/}
       - name: Run scan
-        run: aikido-local-scanner scan demo-app --repositoryname demo-app --branchname main --apikey AIK_CI_Sz8nf7D54i6032lZ9T1UchAQJCk9Zd4tpHX19MM64EXIoNWRYvx6d7gBnzfYKXx1 --scanners trivy --debug
+        run: aikido-local-scanner scan demo-app --repositoryname ${GITHUB_REPOSITORY#*/} --branchname main --apikey AIK_CI_J7eearnk2Lojjtp6jTfvne8BKbg2qcm98nDTg4tSRtSOdNe9wnSSK3lf59D5FUlF --scanners trivy --debug

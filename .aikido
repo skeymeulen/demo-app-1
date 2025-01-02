@@ -7,3 +7,4 @@ exclude:
     - src/python
     - src/index.js
     - package-lock.json
+    - package.json 

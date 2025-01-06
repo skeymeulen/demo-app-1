@@ -1,7 +1,3 @@
-ignore:
-  cves:
-    'CVE-2024-53908':
-      reason: this is the reason
 exclude:
   paths:
     - src/python

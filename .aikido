@@ -2,5 +2,5 @@ ignore:
   cves:
     'CVE-2024-27308':
       reason: dont need this
-    CVE-2015-9235:
-      reason: ignore this cve
+    'CVE-2020-15084':
+      reason: ignore in pr

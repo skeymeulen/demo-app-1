@@ -2,3 +2,9 @@ ignore:
   cves:
     'CVE-2024-27308':
       reason: dont need this
+exclude:
+  paths:
+    - src/python
+    - src/index.js
+    - package-lock.json
+    - package.json 

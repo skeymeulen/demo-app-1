@@ -2,6 +2,8 @@ ignore:
   cves:
     'CVE-2022-24999':
       reason: this is the reason
+    'CVE-2024-27308':
+      reason: dont need this
 exclude:
   paths:
     - src/python

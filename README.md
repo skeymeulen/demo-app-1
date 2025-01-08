@@ -1,3 +1,1 @@
 # Aikido demo repository
-
-

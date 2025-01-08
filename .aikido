@@ -1,6 +1,6 @@
 ignore:
   cves:
-    'CVE-2024-53908':
+    'CVE-2022-24999':
       reason: this is the reason
 exclude:
   paths:

@@ -6,6 +6,6 @@ ignore:
       reason: not important to us
     'CVE-2024-28219':
       reason: not important to us
-    'CVE-2020-7788:
+    'CVE-2020-7788':
       reason: not important to us
 

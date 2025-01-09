@@ -6,9 +6,3 @@ ignore:
       reason: not important to us
     'CVE-2024-28219':
       reason: not important to us
-exclude:
-  paths:
-    - src/python
-    - src/index.js
-    - package-lock.json
-    - package.json 

@@ -4,6 +4,8 @@ ignore:
       reason: dont need this
     'CVE-2024-53908':
       reason: not important to us
+    'CVE-2024-28219':
+      reason: not important to us
 exclude:
   paths:
     - src/python

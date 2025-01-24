@@ -4,6 +4,8 @@ jobs:
   run-aikio-scan:
     docker:
       - image: aikidosecurity/local-scanner:latest
+        volumes:
+          - /var/run/docker.sock:/var/run/docker.sock
 
     steps:
       - checkout:

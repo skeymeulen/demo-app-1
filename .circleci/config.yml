@@ -1,0 +1,21 @@
+version: 2.1
+
+jobs:
+  run-aikio-scan:
+    docker:
+      - image: aikidosecurity/local-scanner:latest
+
+    steps:
+      - checkout:
+          path: my-app
+      - run:
+          name: "Run Aikido scan"
+          command: aikido-local-scanner image-scan node:4.2 --apikey AIK_CI_6jNaCxryRwBWz1YB7Y0dABHCUO5DkIDYCGsBwN2vcd3uPAZDxC4PHFbL99NY2cyY
+workflows:
+  my-workflow:
+    jobs:
+      - run-aikio-scan:
+          filters:
+            branches:
+              only:
+                - main

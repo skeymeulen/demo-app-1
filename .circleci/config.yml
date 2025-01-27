@@ -14,7 +14,7 @@ jobs:
           command: docker --help
       - run:
           name: "Run Aikido scan"
-          command: docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aikidosecurity/local-scanner image-scan node:8.0.0 --apikey AIK_CI_6jNaCxryRwBWz1YB7Y0dABHCUO5DkIDYCGsBwN2vcd3uPAZDxC4PHFbL99NY2cyY
+          command: docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aikidosecurity/local-scanner image-scan node:8.0.0 --apikey AIK_CI_xu6VkpGlaVW2UhoJinaVmGIalHG92Ak3h7zTT5DUXo0RqGprNaVkOiTzhR2I4Dsw
 workflows:
   my-workflow:
     jobs:

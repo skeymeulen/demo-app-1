@@ -6,6 +6,9 @@ jobs:
       - image: cimg/base:2021.07
 
     steps:
+      - setup_remote_docker:
+          # cache docker layers on staging
+          docker_layer_caching: true
       - run:
           name: "Install Docker"
           command: docker --help

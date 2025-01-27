@@ -2,8 +2,8 @@ version: 2.1
 
 jobs:
   run-aikio-scan:
-    machine: # executor type
-      image: ubuntu-2204:current
+    docker: # executor type
+      image: cimg/base:2021.07
 
     steps:
       - run:

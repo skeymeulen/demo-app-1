@@ -8,7 +8,7 @@ jobs:
     steps:
       - run:
           name: "Install Docker"
-          command: docker --help
+          command: docker pull node:4.2
       - run:
           name: "Run Aikido scan"
           command: docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aikidosecurity/local-scanner image-scan node:4.2 --apikey AIK_CI_6jNaCxryRwBWz1YB7Y0dABHCUO5DkIDYCGsBwN2vcd3uPAZDxC4PHFbL99NY2cyY

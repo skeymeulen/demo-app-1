@@ -2,9 +2,8 @@ version: 2.1
 
 jobs:
   run-aikio-scan:
-    docker:
-      machine: # executor type
-        image: ubuntu-2204:current
+    machine: # executor type
+      image: ubuntu-2204:current
 
     steps:
       - checkout:

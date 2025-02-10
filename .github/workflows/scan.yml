@@ -32,6 +32,6 @@ jobs:
         run: uname -m
       - name: Install glibc (for Alpine)
         run: |
-          apk add --no-cache libc6-compat
+          apk add --no-cache libc6-compat gcompat
       - name: Run scan
         run: ./aikido-local-scanner image-scan node:16 --apikey AIK_CI_bLLAgD7Of8oiajxXWjHSYPrQVX9EVHcQFKAVpH9q7K9td1pJywKPnk41KrUjju65

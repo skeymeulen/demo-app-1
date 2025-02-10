@@ -29,4 +29,4 @@ jobs:
       - name: ls
         run: ls
       - name: Run scan
-        run: aikido-local-scanner image-scan node:16 --apikey AIK_CI_bLLAgD7Of8oiajxXWjHSYPrQVX9EVHcQFKAVpH9q7K9td1pJywKPnk41KrUjju65
+        run: ./aikido-local-scanner image-scan node:16 --apikey AIK_CI_bLLAgD7Of8oiajxXWjHSYPrQVX9EVHcQFKAVpH9q7K9td1pJywKPnk41KrUjju65

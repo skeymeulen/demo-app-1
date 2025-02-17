@@ -16,6 +16,7 @@ app.get("/error", (req, res) => {
 
 app.get("/payments", (req, res) => {
   const STRIPE_API_KEY = "sk_live_fakestripeapikeyleaked12"
+  const key = "Test_GetLastChangedAssignmentAddresses"
   res.status(200).send(STRIPE_API_KEY)
 });
 

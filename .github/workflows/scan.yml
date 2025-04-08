@@ -34,4 +34,4 @@ jobs:
         run: |
           apk add --no-cache libc6-compat gcompat
       - name: Run scan
-        run: ./aikido-local-scanner image-scan node:16 --apikey AIK_CI_bLLAgD7Of8oiajxXWjHSYPrQVX9EVHcQFKAVpH9q7K9td1pJywKPnk41KrUjju65
+        run: ./aikido-local-scanner scan . --apikey AIK_CI_JHmgjaaY2adlbEdrS2OadF0qpsrFlte7BPNaHt6TAL6jU6acsqW8TSbNcGYRf1j3 --repositoryname demo-app-1-github-scm-test --branchname master

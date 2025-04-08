@@ -4,10 +4,6 @@ name: Scan within Alpine
 jobs:
   scan-repo:
     runs-on: ubuntu-latest
-    container:
-      image: docker:stable
-      volumes:
-        - /var/run/docker.sock:/var/run/docker.sock
     permissions:
       contents: write
     steps:
@@ -26,12 +22,5 @@ jobs:
         run: unzip aikidoselfscanner_linux_X86_64.zip
       - name: test
         run: chmod +x aikido-local-scanner
-      - name: ls
-        run: ls -lah
-      - name: Check Architecture
-        run: uname -m
-      - name: Install glibc (for Alpine)
-        run: |
-          apk add --no-cache libc6-compat gcompat
       - name: Run scan
         run: ./aikido-local-scanner scan . --apikey AIK_CI_JHmgjaaY2adlbEdrS2OadF0qpsrFlte7BPNaHt6TAL6jU6acsqW8TSbNcGYRf1j3 --repositoryname demo-app-1-github-scm-test --branchname master

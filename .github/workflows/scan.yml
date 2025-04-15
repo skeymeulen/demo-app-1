@@ -1,6 +1,6 @@
 on: workflow_dispatch
 
-name: Scan within Alpine
+name: Aikido scan
 jobs:
   scan-repo:
     runs-on: ubuntu-latest

@@ -23,4 +23,4 @@ jobs:
       - name: test
         run: chmod +x aikido-local-scanner
       - name: Run scan
-        run: ./aikido-local-scanner scan . --apikey AIK_CI_JHmgjaaY2adlbEdrS2OadF0qpsrFlte7BPNaHt6TAL6jU6acsqW8TSbNcGYRf1j3 --repositoryname demo-app-1-github-scm-test --branchname master
+        run: ./aikido-local-scanner scan . --image-name jar-image --apikey AIK_CI_JHmgjaaY2adlbEdrS2OadF0qpsrFlte7BPNaHt6TAL6jU6acsqW8TSbNcGYRf1j3 --repositoryname demo-app-1-github-scm-test --branchname master

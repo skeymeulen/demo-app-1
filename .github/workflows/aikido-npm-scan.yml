@@ -18,7 +18,7 @@ jobs:
 
       # Step 2: Install dependencies
       - name: Install Aikido CI API Client
-        run: npm install --global @aikidosec/ci-api-client
+        run: npm install --global @aikidosec/ci-api-client@1.0.9
 
       # Step 3: Run Aikido Scan Release
       - name: Run Aikido Scan

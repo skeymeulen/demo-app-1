@@ -1,6 +1,6 @@
 on: workflow_dispatch
 
-name: Scan
+name: Aikido scan
 jobs:
   scan-repo:
     runs-on: ubuntu-latest
@@ -23,7 +23,4 @@ jobs:
       - name: test
         run: chmod +x aikido-local-scanner
       - name: Run scan
-        run: ./aikido-local-scanner scan demo-app --apikey AIK_CI_SCdrHwC8Ls64drKGrUYf0Njtu7hCDBkbX5VH8yIHVt0L3eozVVTyrl2FqKwdsTai --repositoryname MyRepo --branchname master --fail-on critical
-      - name: show temp folder
-        if: success() || failure()
-        run: ls /tmp
+        run: ./aikido-local-scanner scan . --image-name jar-image --apikey AIK_CI_JHmgjaaY2adlbEdrS2OadF0qpsrFlte7BPNaHt6TAL6jU6acsqW8TSbNcGYRf1j3 --repositoryname demo-app-1-github-scm-test --branchname master

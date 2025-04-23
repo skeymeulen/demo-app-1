@@ -9,7 +9,7 @@ jobs:
     steps: 
       - uses: actions/checkout@v4 
         with: 
-          token: ${{ secrets.GITHUB_TOKEN }} 
-          path: demo-app
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: ${{ github.event.repository.name }}
       - name: Run scan
-        run: aikido-local-scanner scan demo-app --apikey AIK_CI_xHvwurJxXp3vGkAjAqOuxiY4abSuxISH7cujGLa6mnVVAarh8ACmq8nNyk3xe0s7 --repositoryname MyRepo --branchname master --fail-on critical
+        run: aikido-local-scanner scan ${{ github.event.repository.name }} --repositoryname ${{ github.event.repository.name }} --branchname --main --apikey AIK_CI_J7eearnk2Lojjtp6jTfvne8BKbg2qcm98nDTg4tSRtSOdNe9wnSSK3lf59D5FUlF --debug

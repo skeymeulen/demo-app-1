@@ -1,9 +1,4 @@
 <?php
 
 $a = "foobar";
-var_dump($a);
 
- $AWS_ACCESS_KEY_ID = 'AKIAIWSXFHRM7F6Z3NWQ';
- SLACK_OAUTH_ACCESS_TOKEN = 'xoxb-730191371696-1413868247813-IG7Z6nYevC2hdviE3aJhb5kY'
- PAYPAL_BRAINTREE_ACCESS_TOKEN = 'access_token$production$x0lb8affpzmmnufd$3ea7cb281754b7da7eca131ef9642324'
- VAR_8 = '88df97769ab3185f2c0b2a73fdae1b27d89409ca'

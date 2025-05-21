@@ -1,4 +1,4 @@
-name: Aikido Docker build and push
+name: Aikido Docker build and scan
 
 on:
   push:

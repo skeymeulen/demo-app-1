@@ -3,7 +3,7 @@ name: Aikido Docker build and scan
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build-and-scan:

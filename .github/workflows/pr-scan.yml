@@ -19,4 +19,4 @@ jobs:
       - name: Debug Output branch name short
         run: echo "Feature branch name short ${{ github.head_ref }}"
       - name: Run scan
-        run: aikido-local-scanner scan demo-app --apikey AIK_CI_Rtj05sJhcFoLftHJ0GwcCJVZ56Rk59n0kPvTAnN6UJ2Pj3P57DiVgAOYPTSJgjh6 --repositoryname MyRepo --branchname master --gating-mode pr --fail-on critical --base-commit-id ${{ github.event.pull_request.base.sha }} --head-commit-id ${{ github.event.pull_request.head.sha }}
+        run: aikido-local-scanner scan demo-app --apikey AIK_CI_H5w3zWYRWejmRnpxHhrlUfAi0LK4gBo5dpjfrBycENzSfkiywXdVpbGPvIWeEqJl --repositoryname MyRepo --branchname master --gating-mode pr --fail-on low --base-commit-id ${{ github.event.pull_request.base.sha }} --head-commit-id ${{ github.event.pull_request.head.sha }}

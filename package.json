@@ -23,6 +23,7 @@
     "croppie": "2.6.3",
     "express": "4.16.3",
     "express-http-proxy": "1.2.0",
+    "helmet": "8.1.0",
     "humanize-plus": "1.8.2",
     "jwt-decode": "2.2.0",
     "lodash.merge": "4.6.2",

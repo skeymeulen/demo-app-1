@@ -4,3 +4,5 @@ $a = "foobar";
 
 var_dump($a);
 var_dump($_SERVER);
+
+var_dump($cmd);

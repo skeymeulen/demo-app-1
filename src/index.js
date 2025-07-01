@@ -12,6 +12,7 @@ app.get("/redirect", (req, res) => {
 });
 
 app.get("/error", (req, res) => {
+  const password = "wJalrXUtnFEMIK7MDENGbPxRfiCY";
   throw new Error("Something broke!");
 });
 

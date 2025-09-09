@@ -1,26 +1,27 @@
-on: workflow_dispatch
+name: Aikido Docker build and scan
 
-name: Image scan
+on:
+  push:
+    branches:
+      - main
+
 jobs:
-  scan-repo:
+  build-and-scan:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
-          path: demo-app
-      - name: Install Aikido selfscanner
-        uses: dsaltares/fetch-gh-release-asset@master
-        with:
-          repo: 'skeymeulen/releasetetest'
-          version: 'tags/v1'
-          file: 'aikidoselfscanner_linux_X86_64.zip'
-      - name: unzip
-        run: unzip aikidoselfscanner_linux_X86_64.zip
-      - name: test
-        run: chmod +x aikido-local-scanner
-      - name: Run scan
-        run: ./aikido-local-scanner image-scan centos --apikey=AIK_CI_jONQYH3PHEdujILQx3B73KCTIdzxOxYU4MC85wcGFDWrFEvVglBwSmelcv5e1XXf --fail-on low --debug --max-polling-attempts 100
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker image
+        run: docker build -t your-local-image-name .
+
+      - name: Run Aikido image scan
+        run: |
+          docker run --rm 
+            -v /var/run/docker.sock:/var/run/docker.sock 
+            aikidosecurity/local-scanner 
+            image-scan your-local-image-name 
+            --apikey 123 --fail-on critical
